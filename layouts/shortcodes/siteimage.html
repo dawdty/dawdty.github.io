@@ -1,0 +1,18 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $resize := .Get "resize" -}}
+{{- $resource := resources.Get $src -}}
+{{- if not $resource -}}
+  {{- errorf "siteimage shortcode: resource %q not found" $src -}}
+{{- end -}}
+
+{{- if and $resize (not $resource.MediaType.IsImage) -}}
+  {{- errorf "siteimage shortcode: %q is not an image, cannot resize" $src -}}
+{{- end -}}
+{{- if $resize -}}
+  {{- $resource = $resource.Fit $resize -}}
+{{- end -}}
+
+<img src="{{ $resource.RelPermalink }}" alt="{{ $alt }}"{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }}>

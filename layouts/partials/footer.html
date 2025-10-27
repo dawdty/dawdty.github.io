@@ -1,0 +1,15 @@
+<small>
+  {{- $copyright := .Site.Copyright -}}
+  {{- $madeWith := .Site.Params.madeWith -}}
+  {{- if or $copyright $madeWith -}}
+    {{- if $copyright -}}
+      {{- $copyright -}}
+    {{- end -}}
+    {{- if and $copyright $madeWith -}}
+      | 
+    {{- end -}}
+    {{- if $madeWith -}}
+      {{- $madeWith | markdownify -}}
+    {{- end -}}
+  {{- end -}}
+</small>

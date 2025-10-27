@@ -1,0 +1,30 @@
+baseURL = 'https://edwor.my/'
+languageCode = 'en-us'
+title = '- edmund hattle -'
+theme = "hugo-bearcub"
+disableKinds = ["RSS"]
+showdate = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[menu]
+  [[menu.main]]
+    name = 'About'
+    url = '/'
+    weight = 10
+
+  [[menu.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menu.main]]
+    name = 'Resume'
+    url = '/Resume/'
+    weight = 20
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -8,7 +8,9 @@ title = "Home"
 
 hi, my name is **edmund!**
 
-i'm a linguist & product-minded developer building engaging, interactive experiences with code.
+i'm a linguist & product-minded developer building engaging, interactive experiences with code. 
+
+i spend my free time writing embedded software for custom safety devices, training agentic AIs to teach me language, and running my university's 2nd oldest fraternity: [st. anthony hall](https://deltapsi.unc.edu/)
 
 
 

@@ -1,0 +1,24 @@
+{{ define "main" }}
+<content>
+  <ul class="projects-list">
+    {{ range .Pages }}
+    <li>
+      <div class="project-list-entry">
+        {{ if .Params.link }}
+          <a class="project-title" href="{{ .Params.link }}" target="_blank">{{ .Title }} ↪</a>
+        {{ else }}
+          <a class="project-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        {{ with .Params.subtitle }}
+          <p class="project-subtitle">{{ . }}</p>
+        {{ end }}
+      </div>
+    </li>
+    {{ else }}
+    <li>
+      {{ i18n "no-posts" }}
+    </li>
+    {{ end }}
+  </ul>
+</content>
+{{ end }}
