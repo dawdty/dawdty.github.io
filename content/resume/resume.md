@@ -1,0 +1,8 @@
+
++++
+title = "resume"
+date = "2025-10-27"
+subtitle = ""
++++
+
+### see my most recent resume [here](https://github.com/dawdty/resume/blob/fb1a7bdf4e16aa5a228c6fafb10a51f541d3cc0f/Edmund_H.pdf)   

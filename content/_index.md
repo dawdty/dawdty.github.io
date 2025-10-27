@@ -6,11 +6,11 @@ title = "Home"
 
 {{< siteimage src="images/plan2.png" alt="boarding" width="250" >}}
 
-hi, my name is **edmund!**
+## hi, my name is **edmund!**
 
-i'm a linguist & product-minded developer building engaging, interactive experiences with code. 
+### i'm a linguist & product-minded developer building engaging, interactive experiences with code. 
 
-i spend my free time writing embedded software for custom safety devices, training agentic AIs to teach me language, and running my university's 2nd oldest fraternity: [st. anthony hall](https://deltapsi.unc.edu/)
+*when i'm not studying*, i spend my free time writing embedded software for custom safety devices, training realtime AI to teach me language, and running UNC's 2nd oldest fraternity: [st. anthony hall](https://deltapsi.unc.edu/)
 
 
 
