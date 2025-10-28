@@ -14,14 +14,17 @@ showdate = false
   [[menu.main]]
     name = 'about'
     url = '/'
-    weight = 10
-
+    weight = 6
   [[menu.main]]
     name = 'projects'
     url = '/projects/'
-    weight = 20
+    weight = 7
   [[menu.main]]
-    name = 'resume'
-    url = '/resume/'
-    weight = 20
-
+    name = 'games'
+    url = '/games/'
+    weight = 60
+  [[menu.main]]
+    name = 'resume / cv'
+    url = '/resume-cv/'
+    weight = 70
+  

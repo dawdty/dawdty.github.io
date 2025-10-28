@@ -3,8 +3,8 @@
 title = "resume"
 date = "2025-10-27"
 subtitle = ""
+weight = 1
 +++
-
 {{< embed-pdf url="/files/product-1.pdf" hidePaginator="true" hideLoader="true" >}}
 
 

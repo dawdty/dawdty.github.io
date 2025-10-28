@@ -1,7 +1,13 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ with .Params.subtitle }}
-  <h2 class="project-subtitle">{{ . }}</h2>
+  <h3 class="project-subtitle">{{ . }}</h2>
+{{ end }}
+{{ with .Resources.GetMatch .Params.image }}
+  {{ $resized := .Fit "800x600" }}
+  <div class="project-image">
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $.Title }} preview" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+  </div>
 {{ end }}
 <content>
   {{ .Content }}
