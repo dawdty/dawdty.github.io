@@ -1,7 +1,8 @@
 baseURL = 'https://edwor.my/'
 languageCode = 'en-us'
 title = '- edmund hattle -'
-theme = "hugo-bearcub"
+theme = ["hugo-embed-pdf-shortcode", "hugo-bearcub"]
+enableInlineShortcodes = true
 disableKinds = ["RSS"]
 showdate = false
 
