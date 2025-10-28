@@ -11,20 +11,16 @@ showdate = false
 
 [menu]
   [[menu.main]]
-    name = 'About'
+    name = 'about'
     url = '/'
     weight = 10
 
   [[menu.main]]
-    name = 'Projects'
+    name = 'projects'
     url = '/projects/'
     weight = 20
   [[menu.main]]
-    name = 'Resume'
-    url = '/Resume/'
+    name = 'resume'
+    url = '/resume/'
     weight = 20
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
