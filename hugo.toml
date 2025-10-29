@@ -27,4 +27,8 @@ showdate = false
     name = 'resume / cv'
     url = '/resume-cv/'
     weight = 70
+  [[menu.main]]
+    name = 'contact me'
+    url = '/contact/'
+    weight = 71
   

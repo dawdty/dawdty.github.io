@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "home"
 +++
 
 ![boarding](/images/plan2.png)

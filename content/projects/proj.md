@@ -1,5 +1,5 @@
 +++
-title = "custom language tutor"
+title = "- custom language tutor"
 subtitle = "agentic AI for accelerated fluency"
 weight = 1
 +++

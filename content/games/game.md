@@ -1,5 +1,5 @@
 +++
-title = "roblox: signage"
+title = "- roblox: signage"
 subtitle = "wordless teamwork proof of concept"
 weight = 1
 +++

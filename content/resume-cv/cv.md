@@ -1,7 +1,7 @@
 +++
-title = "cv"
+title = "- cv"
 date = "2025-10-27"
-subtitle = ""
+subtitle = "updated 2025-10-27"
 weight = 0
 +++
 
