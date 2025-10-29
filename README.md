@@ -1,1 +1,0 @@
-made using a slight modification of [bear cub](https://clente.github.io/hugo-bearcub/)
