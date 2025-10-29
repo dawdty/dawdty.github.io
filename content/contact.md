@@ -9,5 +9,3 @@ cascade = { type = "projects", layout = "projects/single" }
 **phone:** +1 [space] 336 [dot] 979 [dot] 8766
 
 **email:** edmundcb0 [at] gmail [dot] com
-
-[analytics](https://cloud.umami.is/share/C0DQf1R7bdBOkqlp)
