@@ -3,10 +3,11 @@
 {{ with .Params.subtitle }}
   <h3 class="project-subtitle">{{ . }}</h2>
 {{ end }}
+{{ $page := . }}
 {{ with .Resources.GetMatch .Params.image }}
   {{ $resized := .Fit "800x600" }}
   <div class="project-image">
-    <img src="{{ $resized.RelPermalink }}" alt="{{ $.Title }} preview" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $page.Title }} preview" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
   </div>
 {{ end }}
 <content>

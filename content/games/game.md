@@ -1,6 +1,7 @@
 +++
 title = "- roblox: signage"
-subtitle = "wordless teamwork proof of concept"
+subtitle = "chatless teamwork proof of concept"
+image = "/images/noFilter2.webp"
 weight = 1
 +++
 

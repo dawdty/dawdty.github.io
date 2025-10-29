@@ -12,6 +12,14 @@
         {{ with .Params.subtitle }}
           <p class="project-subtitle">{{ . }}</p>
         {{ end }}
+        {{ $page := . }}
+        {{ $res := $page.Resources.GetMatch $page.Params.image }}
+        {{ if $res }}
+          {{ $thumb := $res.Fill "400x300" }}
+          <img class="project-thumb" src="{{ $thumb.RelPermalink }}" alt="{{ $page.Title }} preview" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}">
+        {{ else if $page.Params.image }}
+          <img class="project-thumb" src="{{ $page.Params.image }}" alt="{{ $page.Title }} preview">
+        {{ end }}
       </div>
     </li>
     {{ else }}

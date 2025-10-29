@@ -43,7 +43,7 @@ nav a:hover,
 }
 
 .project-list-entry {
-  margin-bottom: 1 rem;
+  margin-bottom: 1rem;
 }
 
 .project-title {
@@ -56,6 +56,13 @@ nav a:hover,
   margin: 0.25rem 0 0;
   font-size: 0.95rem;
   color: #1f2933;
+}
+
+.project-thumb {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5rem;
 }
 
 strong,
