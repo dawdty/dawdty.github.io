@@ -1,8 +1,8 @@
 +++
-title = "- custom language tutor"
-subtitle = "agentic AI for accelerated fluency"
+title = "- custom language tutor (work in progress)"
+subtitle = "speech-enabled agentic AI for accelerated fluency"
 
-weight = 1
+weight = 2
 +++
 
 // under construction

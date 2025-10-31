@@ -15,6 +15,10 @@ h6 {
   color: #1f2933;
 }
 
+.project-detail-title {
+  font-weight: 700;
+}
+
 h2 {
   font-weight: normal;
   color: #1f2933;
@@ -63,6 +67,14 @@ nav a:hover,
   height: auto;
   border-radius: 8px;
   margin-top: 0.5rem;
+}
+
+blockquote {
+  background-color: #f2dfb2;
+  border-left: 4px solid #ffb15f;
+  padding: 0.85rem 1rem;
+  margin: 1.5rem 0;
+  color: #4a2a13;
 }
 
 strong,

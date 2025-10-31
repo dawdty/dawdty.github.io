@@ -5,9 +5,11 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>- persistent building in ROBLOX | - edmund hattle -</title>
-<meta name="title" content="- persistent building in ROBLOX" />
-<meta name="description" content="// under construction" />
+<title>- basic persistent building in ROBLOX | - edmund hattle -</title>
+<meta name="title" content="- basic persistent building in ROBLOX" />
+<meta name="description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs&ndash;where players could do anything from host interactive game shows to found their own functioning towns&ndash;unanimously disappeared.
+
+nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature&ndash;creative engagement&ndash;was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant." />
 <meta name="author" content="" />
 <meta name="keywords" content="" />
 
@@ -19,8 +21,9 @@
   
   <meta property="og:url" content="http://localhost:1313/projects/proj3/">
   <meta property="og:site_name" content="- edmund hattle -">
-  <meta property="og:title" content="- persistent building in ROBLOX">
-  <meta property="og:description" content="// under construction">
+  <meta property="og:title" content="- basic persistent building in ROBLOX">
+  <meta property="og:description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs–where players could do anything from host interactive game shows to found their own functioning towns–unanimously disappeared.
+nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature–creative engagement–was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -29,21 +32,26 @@
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="- persistent building in ROBLOX">
-  <meta name="twitter:description" content="// under construction">
+  <meta name="twitter:title" content="- basic persistent building in ROBLOX">
+  <meta name="twitter:description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs–where players could do anything from host interactive game shows to found their own functioning towns–unanimously disappeared.
+nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature–creative engagement–was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.">
 
 
   
   
-  <meta itemprop="name" content="- persistent building in ROBLOX">
-  <meta itemprop="description" content="// under construction">
-  <meta itemprop="wordCount" content="3">
+  <meta itemprop="name" content="- basic persistent building in ROBLOX">
+  <meta itemprop="description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs–where players could do anything from host interactive game shows to found their own functioning towns–unanimously disappeared.
+nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature–creative engagement–was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.">
+  <meta itemprop="wordCount" content="1165">
 
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   
   <link href="/original.min.css" rel="stylesheet">
 
+  
+    
+    <link href="/syntax.min.css" rel="stylesheet">
   
 
   
@@ -77,14 +85,188 @@
 </nav>
 </header>
   <main id="main-content">
-<h1>- persistent building in ROBLOX</h1>
+<h1 class="project-detail-title">- basic persistent building in ROBLOX</h1>
 
-  <h3 class="project-subtitle">fixing the design choice that haunted my childhood</h2>
+  <h3 class="project-subtitle">creating a solution to a childhood painpoint</h2>
 
 
 
 <content>
-  <p>// under construction</p>
+  <p><strong>personal servers</strong>, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs&ndash;where players could do anything from host interactive game shows to found their own functioning towns&ndash;unanimously disappeared.</p>
+<p><img src="/images/icecastle.png" alt="ice-castle"></p>
+<p>nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature&ndash;creative engagement&ndash;was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.</p>
+<p><img src="/images/catapult.gif" alt="catapult"></p>
+<p>in this article i document my first steps towards a modern adaptation of the personal server &ndash; a persistent building system.</p>
+<h2 id="building-a-foundation"><strong>building a foundation</strong></h2>
+<blockquote>
+<p>while it would be nice to have a single-instance building experience, achieving true single-instance games in roblox is hacky and unreliable. instead, we&rsquo;ll associate build data with individual players, who will be able to load and save their same builds across instances.</p>
+</blockquote>
+<p>we need to store users&rsquo; creations somewhere in the cloud. so we first must understand the difference between roblox&rsquo;s two cloud storage services: <strong>datastores</strong> and <strong>memorystores.</strong> datastores are persistent, cloud-backed storage systems designed to save data between play sessions. memorystores are a low latency, high throughput service that provides storage accessible across all servers. however, despite being fast, this storage is not designed to be large and expires, so <strong>datastores</strong> are the best choice.</p>
+<p>cool, we know exactly what we&rsquo;ll use to store our builds. but a datastore is essentially a dictionary, and players&rsquo; builds are instances. so how do we transform one into another and vice-versa?</p>
+<h3 id="serialization"><strong>serialization</strong></h3>
+<p>instance serialization is the process of transforming instances into formatted text. normally, this is manually implemented by roblox devs depending on what exactly they need to be stored in the cloud. this makes sense: the less objects you need to serialize, the less cloud storage is used. but today there are better solutions to this problem (recursive ones even). one of them is the excellently made <a href="https://github.com/Gem-API/Rose">RoSe</a> by Gem_API, which reduces the serialization and deserialization process to two lines:</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- To turn an Instance into a table:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> rose_table <span style="color:#f92672">=</span> rose.serialize(instance)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- To turn a Rose table back into an Instance:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> result <span style="color:#f92672">=</span> rose.deserialize(rose_table)</span></span></code></pre></div><p>awesome! so now that we have a serialization framework, the rest should be straightforward.</p>
+<h3 id="packing"><strong>packing</strong></h3>
+<p>for each player&rsquo;s build, we&rsquo;ll use a prefix + their unique playerid as a key to access their data.</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> players <span style="color:#f92672">=</span> game:GetService(<span style="color:#e6db74">&#34;Players&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> dataStoreService <span style="color:#f92672">=</span> game:GetService(<span style="color:#e6db74">&#34;DataStoreService&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> RS <span style="color:#f92672">=</span> game:GetService(<span style="color:#e6db74">&#34;ReplicatedStorage&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> dataStore <span style="color:#f92672">=</span> dataStoreService:GetDataStore(<span style="color:#e6db74">&#34;InstanceSave&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> rose <span style="color:#f92672">=</span> require(libraries.Rose)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> keyPrefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Player: &#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- save function begin</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">save</span>(player: Player)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> key <span style="color:#f92672">=</span> keyPrefix <span style="color:#f92672">..</span> tostring(player.UserId) 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- our key will be &#34;Player: userid&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> data <span style="color:#f92672">=</span> {} 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- instantiate the data table associated with our key that we want to store</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> model <span style="color:#f92672">=</span> Instance.new(<span style="color:#e6db74">&#34;Model&#34;</span>, workspace) 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- instantiate model to store player&#39;s saved build inside </span>
+</span></span><span style="display:flex;"><span>	model.Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Model&#34;</span> <span style="color:#f92672">..</span> tostring(player.UserId) 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- associate the model with the player</span></span></span></code></pre></div><p>we&rsquo;ll store a clone of all parts owned by a player in a model to give RoSe, which will recursively serialize the model&rsquo;s children and their properties</p>
+<blockquote>
+<p>to determine which parts should be serialized when a player clicks save, i brutishly modified the game&rsquo;s building tools to rename parts selected by the player to &ldquo;Part+userid&rdquo; if a name does not already exist. the loop below checks if the userid stored in the parts matches the requesting player&rsquo;s before saving. yuck.</p>
+</blockquote>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, obj: Instance <span style="color:#66d9ef">in</span> ipairs(parts:GetChildren()) <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> obj.Name <span style="color:#f92672">~=</span> <span style="color:#e6db74">&#34;Part&#34;</span> <span style="color:#f92672">..</span> tostring(player.UserId) <span style="color:#66d9ef">then</span> continue <span style="color:#66d9ef">end</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- bad mechanism for player part ownership, modify this later..</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">local</span> clone <span style="color:#f92672">=</span> obj:Clone() 
+</span></span><span style="display:flex;"><span>            clone.Parent <span style="color:#f92672">=</span> model 
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- clone each part and put it inside the model</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span></span></span></code></pre></div><p>now we do some cleanup, making sure to store the model clone in ReplicatedStorage before using RoSe. if the serialization succeeds, we insert the data into the table we instantiated earlier.</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>    model.Parent <span style="color:#f92672">=</span> RS
+</span></span><span style="display:flex;"><span>     <span style="color:#75715e">-- store build in replicated storage so it cannot be modified by player(s)</span>
+</span></span><span style="display:flex;"><span>	model:PivotTo(CFrame.new(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)) 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- center build model&#39;s position property to origin</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> serializedData <span style="color:#f92672">=</span> rose.serialize(model)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- use RoSe to recursively serialize instance trees</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">--TODO: convert to JSON and compress before storing, then convert back after</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> serializedData <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		table.insert(data, serializedData)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>		warn(<span style="color:#e6db74">&#34;Failed to serialize object: &#34;</span> <span style="color:#f92672">..</span> model.Name)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- insert serialized entry into table for storage</span></span></span></code></pre></div><p>lastly, we store the data, as well as the game&rsquo;s jobid (which will be important later) in the cloud</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>    <span style="color:#66d9ef">local</span> saveData <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            JobId <span style="color:#f92672">=</span> game.JobId, <span style="color:#75715e">-- store the current instance&#39;s JobId</span>
+</span></span><span style="display:flex;"><span>            Data <span style="color:#f92672">=</span> data         <span style="color:#75715e">-- store serialized data</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">local</span> success, err
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">repeat</span>
+</span></span><span style="display:flex;"><span>            success, err <span style="color:#f92672">=</span> pcall(<span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>                dataStore:UpdateAsync(key, <span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> saveData
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">-- update dataStore with table of serializations and JobId</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">until</span> success
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> success <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            warn(<span style="color:#e6db74">&#34;Failed to save data: &#34;</span> <span style="color:#f92672">..</span> tostring(err))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- save function end</span></span></span></code></pre></div><h3 id="unpacking"><strong>unpacking</strong></h3>
+<p>next, we&rsquo;ll implement the slightly more complicated load function. while it doesn&rsquo;t necessarily need to take both the player and a CFrame as an argument, i built a separate script to record the player&rsquo;s mouse position when placing the model. the first part of the script is essentially the reverse of save()&rsquo;s last bits.</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">load</span>(player: Player, pos: CFrame)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> key <span style="color:#f92672">=</span> keyPrefix <span style="color:#f92672">..</span> tostring(player.UserId)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> success, err
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">local</span> savedData
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">repeat</span>
+</span></span><span style="display:flex;"><span>		success, err <span style="color:#f92672">=</span> pcall(<span style="color:#66d9ef">function</span>()
+</span></span><span style="display:flex;"><span>			savedData <span style="color:#f92672">=</span> dataStore:GetAsync(key)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- retrieve data for datastore</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">until</span> success <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> players:FindFirstChild(player.Name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> success <span style="color:#f92672">and</span> savedData <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">-- check if the JobId matches the current instance&#39;s JobId</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> savedData.JobId <span style="color:#f92672">==</span> game.JobId <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>			print(player.Name <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34; has already joined this instance. Halting load.&#34;</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#75715e">-- halt the load function to prevent duplicate loads</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">local</span> data <span style="color:#f92672">=</span> savedData.Data</span></span></code></pre></div><p>we use the JobId stored from earlier to prevent the player from loading more than once. then, we deserialize the object and return it to the workspace, making sure to reparent all parts independently to the workspace.</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>        <span style="color:#66d9ef">local</span> data <span style="color:#f92672">=</span> savedData.Data
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">local</span> serializedModel <span style="color:#f92672">=</span> data <span style="color:#f92672">and</span> data[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> serializedModel <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">local</span> newObj <span style="color:#f92672">=</span> rose.deserialize(serializedModel)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- RoSe handles deserialization</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> newObj <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> newObj.className <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Model&#34;</span> <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">local</span> _, size <span style="color:#f92672">=</span> newObj:GetBoundingBox()
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">local</span> bottomOffset <span style="color:#f92672">=</span> size.Y <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">--[[
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            we centered the model at the origin, but in order to 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            make sure the build does not load partially underground,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            we offset Y by half the height of the model.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                    ]]</span> 
+</span></span><span style="display:flex;"><span>                    newObj:PivotTo(newObj:GetPivot() <span style="color:#f92672">+</span> pos <span style="color:#f92672">+</span> Vector3.new(<span style="color:#ae81ff">0</span>, bottomOffset, <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>                    Helper.decouple(newObj)
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">-- helper method to reparent all deserialized parts to workspace</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>                newObj.Parent <span style="color:#f92672">=</span> workspace.Parts
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                warn(<span style="color:#e6db74">&#34;failed to deserialize object&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            warn(<span style="color:#e6db74">&#34;no serialized model found in saved data&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> <span style="color:#f92672">not</span> success <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>		warn(<span style="color:#e6db74">&#34;failed to load data: &#34;</span> <span style="color:#f92672">..</span> tostring(err))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span></span></span></code></pre></div><p>now we just create remotes to trigger the functions!</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> loadParts <span style="color:#f92672">=</span> RS:FindFirstChild(<span style="color:#e6db74">&#34;Loadparts&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> saveParts <span style="color:#f92672">=</span> RS:FindFirstChild(<span style="color:#e6db74">&#34;Saveparts&#34;</span>)
+</span></span><span style="display:flex;"><span>loadParts.OnServerEvent:Connect(load)
+</span></span><span style="display:flex;"><span>saveParts.OnServerEvent:Connect(save)</span></span></code></pre></div><h2 id="the-finished-product"><strong>the finished product</strong></h2>
+<p><img src="/images/success(1).gif" alt="success"></p>
+<p>voila! if you have any questions, comments, or suggestions for this post, feel free to <a href="/contact/">contact me</a></p>
 
 </content>
 
