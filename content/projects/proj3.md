@@ -6,11 +6,9 @@ weight = 1
 +++
 
 
-**personal servers**, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs--where players could do anything from host interactive game shows to found their own functioning towns--unanimously disappeared. 
+**personal servers**, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs--where players could do anything from host interactive game shows to found their own functioning towns--completely disappeared. 
 
 ![ice-castle](/images/icecastle.png)
-
-
 
 nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature--creative engagement--was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.
 

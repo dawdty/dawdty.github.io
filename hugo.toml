@@ -31,4 +31,8 @@ showdate = false
     name = 'contact me'
     url = '/contact/'
     weight = 71
+  [[menu.main]]
+    name = 'art'
+    url = '/art/'
+    weight = 69
   
