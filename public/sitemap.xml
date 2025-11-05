@@ -7,6 +7,8 @@
   </url><url>
     <loc>http://localhost:1313/projects/proj3/</loc>
   </url><url>
+    <loc>http://localhost:1313/art/art1/</loc>
+  </url><url>
     <loc>http://localhost:1313/games/game2/</loc>
   </url><url>
     <loc>http://localhost:1313/games/game/</loc>
@@ -25,8 +27,6 @@
     <lastmod>2025-10-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/art/</loc>
-  </url><url>
-    <loc>http://localhost:1313/art/art1/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
