@@ -4,10 +4,6 @@ date = "2025-11-04"
 subtitle = "updated 2025-11-04"
 weight = 0
 +++
-
-### [click here to see my resume](#resume)
-
-
 # Curriculum Vitae
 
 # **Edmund Hattle**
@@ -20,8 +16,6 @@ weight = 0
 - First non-heritage Chinese student to complete the accelerated heritage track at UNC
 - **CS Coursework**: Introduction to Programming, Data Structures and Algorithms, Foundations of Programming, Computer Organization, Systems Fundamentals, Linear Algebra, Discrete Mathematics, 2D Graphics, Computer Security Fundamentals, Algorithms and Analysis
 - **Chinese Coursework**: CHIN 520: Stay Tuned to China, CHIN 490: Exploring Taiwanese Culture and Society, CHIN 445: Chinese Tea Culture and Its Changing Landscape, CHIN 313: Advanced Written Chinese (all taught in target language)
-
-Expected Graduation: May 2027  
 
 **National Taiwan University** — Taipei, Taiwan  
 *Philips Ambassador (Resistance Movements in Asia, Cross-Strait Relations)* - Summer 2024  
@@ -90,8 +84,4 @@ May 2021 – June 2022
 **Developer Tools:** Git, Docker, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse  
 **Languages:** English (Fluent/Native), Chinese (Fluent/Second Language)
 
----
 
-# Resume {#resume}
-
-{{< embed-pdf url="/files/product-1.pdf" hidePaginator="true" hideLoader="true" >}}

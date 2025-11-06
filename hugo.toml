@@ -24,8 +24,8 @@ showdate = false
     url = '/games/'
     weight = 60
   [[menu.main]]
-    name = 'resume / cv'
-    url = '/resume-cv/'
+    name = 'cv'
+    url = '/cv/'
     weight = 70
   [[menu.main]]
     name = 'contact me'
