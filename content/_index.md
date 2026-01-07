@@ -2,7 +2,7 @@
 title = "home"
 +++
 
-![boarding](/images/img_9003_30.png)
+![boarding](/images/IMG_9003_30.png)
 
 ## hi, my name is **edmund!**
 
