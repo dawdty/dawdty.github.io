@@ -13,14 +13,14 @@ weight = 0
 **University of North Carolina at Chapel Hill** — Chapel Hill, NC  
 *B.S. Computer Science*, *B.A. Asian Studies (Chinese Concentration)*
 
-- First non-heritage Chinese student to complete the accelerated heritage track at UNC
 - **CS Coursework**: Introduction to Programming, Data Structures and Algorithms, Foundations of Programming, Computer Organization, Systems Fundamentals, Linear Algebra, Discrete Mathematics, 2D Graphics, Computer Security Fundamentals, Algorithms and Analysis
 - **Chinese Coursework**: CHIN 520: Stay Tuned to China, CHIN 490: Exploring Taiwanese Culture and Society, CHIN 445: Chinese Tea Culture and Its Changing Landscape, CHIN 313: Advanced Written Chinese (all taught in target language)
+- First non-heritage Chinese Language student to complete the accelerated heritage track at UNC
 
 **National Taiwan University** — Taipei, Taiwan  
 *Philips Ambassador (Resistance Movements in Asia, Cross-Strait Relations)* - Summer 2024  
 
-- Researched postwar resistance movements, Taiwan–Mainland China relations, and East Asian political history through the Philips Ambassador Program.
+- Researched postwar resistance movements, Taiwan–Mainland China relations, and East Asian political history through the Philips Ambassadors Program.
 
 **Tamkang University** — Taipei, Taiwan  
 *Chinese Language Study (NSLI-Y Scholar)*  - August 2022 – June 2023  

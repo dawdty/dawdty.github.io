@@ -2,11 +2,13 @@
 title = "home"
 +++
 
-![boarding](/images/plan2.png)
+![boarding](/images/img_9003_30.png)
 
 ## hi, my name is **edmund!**
 
-### i'm a linguist & product-minded developer building engaging, interactive experiences with code.
+### i'm a linguist & product-minded developer who loves building engaging, interactive experiences with code.
 
-*when i'm not studying*, i spend my free time writing embedded software for custom safety devices, training realtime AI to teach me language, and running UNC's 2nd oldest fraternity: [st. anthony hall](https://deltapsi.unc.edu/)
+### at school, i'm pursuing [dual degrees](/cv) in chinese and computer science.
+
+### when i'm not studying, i spend my free time writing embedded software for safety devices, [training AI to speed up language acquisition,](projects/proj/) and running UNC's 2nd oldest fraternity, st. anthony hall.
 

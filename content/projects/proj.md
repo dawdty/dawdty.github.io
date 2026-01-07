@@ -1,8 +1,12 @@
 +++
 title = "- custom language tutor (work in progress)"
 subtitle = "speech-enabled agentic AI for accelerated fluency"
-image = "/images/customlang.gif"
+image = "/images/customlang-preview.gif"
 weight = 2
 +++
 
-// under construction
+![customlang](/images/customlang-preview.gif)
+
+![// under construction](/images/Omega1341imageconstruction.gif)
+
+// project finished, blogpost under construction. check back in a couple days

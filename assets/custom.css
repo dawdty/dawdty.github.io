@@ -9,9 +9,14 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+  font-weight: normal;
+  color: #1f2933;
+}
+
 h6 {
   font-weight: normal;
+  font-size: x-small;
   color: #1f2933;
 }
 
@@ -25,7 +30,7 @@ h2 {
 }
 
 .title h1{
-  font-weight: bold;
+  font-weight: 400;
   color: #1f2933;
 }
 
@@ -86,7 +91,7 @@ b {
 img[alt="boarding"] {
   float: left;
   width: 240px;
-  max-width: 40vw;
+  max-width: 46vw;
   margin: 0 2rem 2rem 0;
   border-radius: 12px;
 }

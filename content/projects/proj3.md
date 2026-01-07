@@ -66,7 +66,7 @@ local function save(player: Player)
 
 we'll store a clone of all parts owned by a player in a model to give RoSe, which will recursively serialize the model's children and their properties
 
->to determine which parts should be serialized when a player clicks save, i brutishly modified the game's building tools to rename parts selected by the player to "Part+userid" if a name does not already exist. the loop below checks if the userid stored in the parts matches the requesting player's before saving. yuck.
+>to determine which parts should be serialized when a player clicks save, i brutishly modified [f3x tools](https://github.com/F3XTeam/RBX-Building-Tools) to rename parts selected by the player to "Part+userid." the loop below checks if the userid stored in the parts matches the requesting player's before saving. yucky and inadvisable.
 
 ```lua
     for i, obj: Instance in ipairs(parts:GetChildren()) do

@@ -5,7 +5,7 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>- basic persistent building in ROBLOX | - edmund hattle -</title>
+<title>- basic persistent building in ROBLOX | • edmund hattle •</title>
 <meta name="title" content="- basic persistent building in ROBLOX" />
 <meta name="description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs&ndash;where players could do anything from host interactive game shows to found their own functioning towns&ndash;completely disappeared.
 
@@ -20,7 +20,7 @@ nearly a decade later, i still remember these games. personal servers were a uni
 
   
   <meta property="og:url" content="http://localhost:1313/projects/proj3/">
-  <meta property="og:site_name" content="- edmund hattle -">
+  <meta property="og:site_name" content="• edmund hattle •">
   <meta property="og:title" content="- basic persistent building in ROBLOX">
   <meta property="og:description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs–where players could do anything from host interactive game shows to found their own functioning towns–completely disappeared.
 nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature–creative engagement–was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.">
@@ -42,7 +42,7 @@ nearly a decade later, i still remember these games. personal servers were a uni
   <meta itemprop="name" content="- basic persistent building in ROBLOX">
   <meta itemprop="description" content="personal servers, also known as personal building servers, were a feature on roblox that allowed players to create and share single-instance, persistent building worlds. removed on june 8th, 2016 due to moderation complexities, performance issues, and the release of team create, the once thriving community hubs–where players could do anything from host interactive game shows to found their own functioning towns–completely disappeared.
 nearly a decade later, i still remember these games. personal servers were a unique experience where emergent gameplay was king, representing a class of game whose main feature–creative engagement–was sacrificed for scalability. the hours i spent building airplanes using a physics glitch involving a toilet or putting explosives on the end of a crudely engineered catapult were experiences i still consider formative to my creative slant.">
-  <meta itemprop="wordCount" content="1165">
+  <meta itemprop="wordCount" content="1158">
 
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -63,7 +63,7 @@ nearly a decade later, i still remember these games. personal servers were a uni
 <body>
   <header><a class="skip-link" href="#main-content">Skip to main content</a>
 
-<a href="/" class="title"><h1>- edmund hattle -</h1></a>
+<a href="/" class="title"><h1>• edmund hattle •</h1></a>
 <nav>
   <a href="/">about</a>
 
@@ -142,7 +142,7 @@ nearly a decade later, i still remember these games. personal servers were a uni
 </span></span><span style="display:flex;"><span>	model.Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Model&#34;</span> <span style="color:#f92672">..</span> tostring(player.UserId) 
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- associate the model with the player</span></span></span></code></pre></div><p>we&rsquo;ll store a clone of all parts owned by a player in a model to give RoSe, which will recursively serialize the model&rsquo;s children and their properties</p>
 <blockquote>
-<p>to determine which parts should be serialized when a player clicks save, i brutishly modified the game&rsquo;s building tools to rename parts selected by the player to &ldquo;Part+userid&rdquo; if a name does not already exist. the loop below checks if the userid stored in the parts matches the requesting player&rsquo;s before saving. yuck.</p>
+<p>to determine which parts should be serialized when a player clicks save, i brutishly modified <a href="https://github.com/F3XTeam/RBX-Building-Tools">f3x tools</a> to rename parts selected by the player to &ldquo;Part+userid.&rdquo; the loop below checks if the userid stored in the parts matches the requesting player&rsquo;s before saving. yucky and inadvisable.</p>
 </blockquote>
 
 
