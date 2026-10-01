@@ -8,7 +8,11 @@ body {
 }
 
 a {
-  color: inherit;
+  color: blue;
+}
+
+a:visited {
+  color: blue;
 }
 
 img {
